@@ -1,11 +1,21 @@
-<ul class="top">
-  <ul>
+<div class="top">
+  <ul [style.top.%]="topPosition">
+    <li *ngFor="let project of projects">
+      {{ project.name }}
+      <div class="breakW"></div>
+    </li>
+  </ul>
+</div>
+<div class="main">
+  <ul [style.top.%]="position">
     <li *ngFor="let project of projects">{{ project.name }}</li>
   </ul>
-  <ul class="main">
-    <li *ngFor="let project of projects">{{ project.name }}</li>
+</div>
+<div class="bottom">
+  <ul [style.top.%]="bottomPosition">
+    <li *ngFor="let project of projects">
+      <div class="breakW"></div>
+      {{ project.name }}
+    </li>
   </ul>
-  <ul class="bottom">
-    <li *ngFor="let project of projects">{{ project.name }}</li>
-  </ul>
-</ul>
+</div>
