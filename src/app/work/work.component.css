@@ -1,0 +1,39 @@
+.cover {
+    height:100%;
+    width:100%;
+    background-color: #000;
+    position: absolute;
+    opacity:0.3;
+}
+
+.items {
+    height:100vh;
+    width:100%;
+    overflow:hidden;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.items img {
+    width:130%;
+    object-fit:cover;
+}
+
+h1 {
+    position:absolute;
+    align-self:center;
+    justify-self:center;
+    color:#fff;
+}
+
+app-navigation {
+    position:fixed;
+    z-index:15;
+    color:#fff;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height:100vh;
+    width:100%;
+}

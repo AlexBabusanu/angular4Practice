@@ -1,0 +1,6 @@
+  <app-navigation></app-navigation>
+  <div class="items" *ngFor="let k of objectKeys(projects)">
+    <div class="cover"></div>
+    <img [src]="projects[k].image">
+    
+  </div>
