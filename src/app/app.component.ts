@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Project } from './shared/project.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +9,15 @@ import { Project } from './shared/project.model';
 
 
 export class AppComponent implements OnInit {
-  
+  uri = "/";
+  constructor(private router: Router) {
+    router.events.subscribe(
+      (url: any) => {
+        this.uri = router.url;
 
-
+      }
+    )
+  }
 
   ngOnInit() {
   }

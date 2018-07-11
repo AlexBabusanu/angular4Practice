@@ -14,8 +14,8 @@ export class NavigationComponent implements OnInit {
   bottomPosition: string;
   @HostListener("window:scroll", ["$event"])
   onWindowScroll(){
-    this.position = "-" + window.pageYOffset / window.innerHeight * 75;
-    this.bottomPosition = "-" + (15 + window.pageYOffset / window.innerHeight * 15);
+    this.position = "-" + window.pageYOffset / window.innerHeight * 125;
+    this.bottomPosition = "-" + (15 + window.pageYOffset / window.innerHeight * 17.5);
     this.topPosition = 100 - window.pageYOffset / window.innerHeight * 15;
    
   }

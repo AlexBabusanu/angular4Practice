@@ -27,6 +27,9 @@ ul {
 .bottom {
     overflow:hidden;
 }
+.bottom ul {
+    top:-15%;
+}
 .breakW {
 	background:#fff;
 	height:25px;

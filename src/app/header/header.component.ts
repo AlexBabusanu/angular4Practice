@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,15 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  @Input()
   uri = "/";
-  constructor(private router: Router) { 
-    router.events.subscribe(
-      (url:any) => {
-        this.uri = router.url;       
-       
-      }
-    )
-  }
 
   ngOnInit() {
     

@@ -1,5 +1,11 @@
-<div mouseWheel (mouseWheelUp)="mouseWheelUpFunc(event)" (mouseWheelDown)="mouseWheelDownFunc(event)">
+<div *ngIf="uri === '/'" mouseWheel (mouseWheelUp)="mouseWheelUpFunc(event)" (mouseWheelDown)="mouseWheelDownFunc(event)">
 <app-header></app-header>
+
+<router-outlet></router-outlet>
+</div>
+
+<div *ngIf="uri !=='/'">
+<app-header [uri]="uri"></app-header>
 
 <router-outlet></router-outlet>
 </div>
