@@ -8,7 +8,7 @@
 </div>
 <div class="main">
   <ul [style.top.%]="position">
-    <li *ngFor="let project of projects">{{ project.name }}</li>
+    <li *ngFor="let project of projects"><a [routerLink]="['/work/', project.link]">{{ project.name }}</a></li>
   </ul>
 </div>
 <div class="bottom">
